@@ -1,0 +1,13 @@
+[project]
+name = "pyshiftsla-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "faker>=33.1.0",
+    "psycopg2>=2.9.10",
+    "pyshiftsla>=0.2.0",
+    "python-dotenv>=1.0.1",
+    "sqlalchemy>=2.0.36",
+]

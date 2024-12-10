@@ -1,14 +1,5 @@
 version: "3.8"
 services:
-  fastapi-server:
-    build: .
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./app:/app
-    environment:
-      DATABASE_URL: "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:${POSTGRES_PORT}/${POSTGRES_DB}"
-
   customer-service-db:
     image: postgres:15
     container_name: customer_service
@@ -21,6 +12,6 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 volumes:
   postgres_data:

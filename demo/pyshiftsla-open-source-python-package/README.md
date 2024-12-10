@@ -17,4 +17,3 @@
 
 # References
 - [The pyshiftsla project](https://pypi.org/project/pyshiftsla/)
-- The Digital Ocean: [How to Build Fast API Application using Docker Compose](https://www.digitalocean.com/community/tutorials/create-fastapi-app-using-docker-compose)
