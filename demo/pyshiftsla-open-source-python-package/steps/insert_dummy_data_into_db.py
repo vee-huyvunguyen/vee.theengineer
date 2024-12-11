@@ -5,12 +5,13 @@ import random
 import psycopg2
 from os import getenv
 
+
 def generate_dummy_data_daily(
     faker_instance: Faker,
     employees_emails: List[str],
     customers_emails: List[str],
     current_date: datetime,
-    number_of_message_daily: int
+    number_of_message_daily: int,
 ) -> List[dict]:
     """
     Generate dummy data for a single day.
@@ -29,7 +30,7 @@ def generate_dummy_data_daily(
             "message_from": message_from,
             "session_order_in_date": random.randint(1, 20),
             "datetime": datetime_message_sent_at,
-            "message": "Hello, Hi, How are you ?"
+            "message": "Hello, Hi, How are you ?",
         }
         for _ in range(number_of_message_daily)
     ]
@@ -40,31 +41,39 @@ def generate_dummy_data(
     number_of_unique_employees_email: int,
     number_of_unique_customers_email: int,
     data_datetime_range: Tuple[datetime, datetime],
-    number_of_message_daily: int
+    number_of_message_daily: int,
 ) -> List[dict]:
     """
     Generate dummy customer service message data for a date range.
     """
     start_date, end_date = data_datetime_range
-    employees_emails = [faker_instance.email() for _ in range(number_of_unique_employees_email)]
-    customers_emails = [faker_instance.email() for _ in range(number_of_unique_customers_email)]
+    employees_emails = [
+        faker_instance.email() for _ in range(number_of_unique_employees_email)
+    ]
+    customers_emails = [
+        faker_instance.email() for _ in range(number_of_unique_customers_email)
+    ]
 
     # Generate a list of dates within the range
     date_range = [
-        start_date + timedelta(days=i)
-        for i in range((end_date - start_date).days + 1)
+        start_date + timedelta(days=i) for i in range((end_date - start_date).days + 1)
     ]
 
     # Use map to generate messages for each day
     daily_messages = map(
         lambda date: generate_dummy_data_daily(
-            faker_instance, employees_emails, customers_emails, date, number_of_message_daily
+            faker_instance,
+            employees_emails,
+            customers_emails,
+            date,
+            number_of_message_daily,
         ),
         date_range,
     )
 
     # Flatten the list of lists into a single list
     return [message for day_messages in daily_messages for message in day_messages]
+
 
 def insert_data_into_postgres(data: List[dict], connection_params: dict):
     """
@@ -86,8 +95,14 @@ def insert_data_into_postgres(data: List[dict], connection_params: dict):
 
     # Prepare the data for insertion
     records = [
-        (record["message_sent_at"], record["is_customer"], record["message_from"],
-         record["session_order_in_date"], record["datetime"], record['message'])
+        (
+            record["message_sent_at"],
+            record["is_customer"],
+            record["message_from"],
+            record["session_order_in_date"],
+            record["datetime"],
+            record["message"],
+        )
         for record in data
     ]
 
@@ -102,6 +117,7 @@ def insert_data_into_postgres(data: List[dict], connection_params: dict):
         cursor.close()
         connection.close()
 
+
 # Example usage:
 def execute():
     faker = Faker()
@@ -114,7 +130,7 @@ def execute():
         number_of_unique_employees_email=5,
         number_of_unique_customers_email=50,
         data_datetime_range=(start_date, end_date),
-        number_of_message_daily=5000
+        number_of_message_daily=5000,
     )
 
     # Insert dummy data into PostgreSQL

@@ -1,10 +1,12 @@
 # pyshifsla
 - You can watch the [video demo](https:/loom.com), or read the guide below.
-- What does this project do ?
-    - Build a python package (you can install with `pip install pyshiftsla`)
-    - That can generate employees' workshifts, based on their days-off requests and company's policies
-    - Then calculate employees' SLA (service level agreement)
-        - Mainly used for customer services.
+- What problems does this project solve ?
+    - Calculating the SLA (service level agreement) of the customer support team. While ...
+    - ... Minimizing API calls to the employees' timekeeping database
+- How does the project solve the problems?
+    - It is python package (you can install with `pip install pyshiftsla`)
+    - That can logically generate employees' timekeeping (workshifts).
+    - Then calculate employees' SLA, based on the generated workshifts.
 - What skills do I want to show?:
     - The domain knowledge:
         - Customer services' SLA.

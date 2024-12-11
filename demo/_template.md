@@ -1,6 +1,7 @@
 # [Project-name]
 - [Optional] You can watch the [video demo](https:/youtube.com), or read the guide below.
-- What does the project do ?
+- What problems does this project solve ?
+- How does the project solve the problems?
 - What skills do I want to show ?
 
 # Steps to run the demo
