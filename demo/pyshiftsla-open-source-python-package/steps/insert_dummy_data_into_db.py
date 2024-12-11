@@ -105,7 +105,7 @@ def insert_data_into_postgres(data: List[dict], connection_params: dict):
         )
         for record in data
     ]
-
+    print(f"Inserting {len(data)} customer support messages into the database")
     try:
         cursor.executemany(insert_query, records)
         connection.commit()
@@ -119,7 +119,7 @@ def insert_data_into_postgres(data: List[dict], connection_params: dict):
 
 
 # Example usage:
-def execute():
+def main():
     faker = Faker()
     start_date = datetime(2023, 1, 1)
     end_date = datetime(2023, 1, 7)
@@ -143,3 +143,6 @@ def execute():
     }
 
     insert_data_into_postgres(dummy_data, db_params)
+
+if __name__ == "__main__":
+    main()

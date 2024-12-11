@@ -1,5 +1,5 @@
 # pyshifsla
-- You can watch the [video demo](https:/loom.com), or read the guide below.
+*You can watch the [video demo](https:/loom.com)
 - What problems does this project solve ?
     - Calculating the SLA (service level agreement) of the customer support team. While ...
     - ... Minimizing API calls to the employees' timekeeping database
@@ -15,7 +15,19 @@
     - The techniques: OOP, Unit testing, CICD pipelines
 
 # Steps to run the demo
-- Step 1:
+## Option 1: With [uv](https://docs.astral.sh/uv/)
+- Step 1: Install [uv](https://docs.astral.sh/uv/)
+- Step 2: execute `uv sync`
+- You Run any python file with `uv run python-file.py` at the top level of the project.
+    - E.g.: `uv run steps/generate_employee_workshift.py`
+
+## Option 2: Without [uv](https://docs.astral.sh/uv/)
+- Step 1: Install the neede environment:
+    - The project is tested with `python==3.10`, so you should install that version.
+    - Install the dependencies in `requirements.txt`: `pip install -r requirements.txt`
+- Run the python files:
+    - E.g.: `uv run steps/generate_employee_workshift.py`
+
 
 # References
 - [The pyshiftsla project](https://pypi.org/project/pyshiftsla/)
