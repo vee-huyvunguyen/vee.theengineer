@@ -245,7 +245,7 @@ wheels = [
 
 [[package]]
 name = "pyshiftsla"
-version = "0.4.0"
+version = "0.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "lunardate" },
@@ -253,9 +253,9 @@ dependencies = [
     { name = "polars" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ec/e4/71a9cf78fc572183b7b17d3b97cd4c5b735aae6ec185d5219e97b4645a39/pyshiftsla-0.4.0.tar.gz", hash = "sha256:50ddc729c88b482e3032845faaf40823075e7cca786be43cecbe35b9e9b94da5", size = 13833 }
+sdist = { url = "https://files.pythonhosted.org/packages/3f/5e/96e9f211948d64d3dc3b037c810c154135bb4eb06c25a39b10cd0625f4da/pyshiftsla-0.5.0.tar.gz", hash = "sha256:13bdf0e51436c011d2300a60a5c60d9ad05a7a0c153cd1f34f8de2ef63c2d46b", size = 13839 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9f/c1/ff9ee004b7e1f2030a862b553ffeae572d8621989e58a932fe25e7b93a2f/pyshiftsla-0.4.0-py3-none-any.whl", hash = "sha256:a7ee5707e49c8cbcea03932f04da97f871596483480c3dd9890235f7cce8b1d9", size = 14097 },
+    { url = "https://files.pythonhosted.org/packages/f5/51/fccee755eaad95e36e5d110edab0fa2275fb1d10111b56a29a52b8d06eba/pyshiftsla-0.5.0-py3-none-any.whl", hash = "sha256:bd184396a398f711596a25e8f14176991e2eb15b1c555c61c07c26bbda932d51", size = 14223 },
 ]
 
 [[package]]
@@ -275,7 +275,7 @@ requires-dist = [
     { name = "faker", specifier = ">=33.1.0" },
     { name = "holidays", specifier = ">=0.62" },
     { name = "psycopg2", specifier = ">=2.9.10" },
-    { name = "pyshiftsla", specifier = ">=0.4.0" },
+    { name = "pyshiftsla", specifier = ">=0.5.0" },
     { name = "sqlalchemy", specifier = ">=2.0.36" },
 ]
 

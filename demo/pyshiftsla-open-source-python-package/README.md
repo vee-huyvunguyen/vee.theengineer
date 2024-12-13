@@ -1,5 +1,5 @@
 # pyshifsla
-*You can watch the [video demo](https:/loom.com)
+*You can watch the [video demo](https://www.loom.com/share/a8decdd99bb14ce4ac1e6131ea9b7ea7?sid=f6bc8ec6-c84b-4079-8d3b-9d6153bfea1b), the slide is in `assets/` folder
 - What problems does this project solve ?
     - Calculating the SLA (service level agreement) of the customer support team. While ...
     - ... Minimizing API calls to the employees' timekeeping database
