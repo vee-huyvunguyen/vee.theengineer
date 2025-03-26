@@ -1,4 +1,4 @@
-# [Project-name]
+# Image Scraping and AI Tagging
 - The project is on a [Google Sheet](https://docs.google.com/spreadsheets/d/1bL2DR6-40eibcSMPtQXXu_RxWYKfQ-ifLzYuWQiftU4/edit?gid=674136501#gid=674136501), you can filter the images on there.
 - What problems does this project solve ?
     - It scrape the wallpaper (used for home decoration) from https://holdendecor.co.uk/
